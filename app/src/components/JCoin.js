@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { newContextComponents } from "drizzle-react-components";
 import { DrizzleContext } from "drizzle-react";
 
@@ -11,7 +11,7 @@ import {
     Input,
     Button,
     Loader
-} from 'rimble-ui'
+} from "rimble-ui";
 
 const { ContractData, ContractForm } = newContextComponents;
 
@@ -93,6 +93,7 @@ export default () => (
 
                         <Flex
                             mt={2}
+                            pb={10}
                             flexBasis="auto"
                             flexDirection="column"
                         >

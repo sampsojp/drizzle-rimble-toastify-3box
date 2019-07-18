@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import { Drizzle } from 'drizzle';
+import { Drizzle } from "drizzle";
 import { DrizzleContext } from "drizzle-react";
+
 import drizzleOptions from "./drizzleOptions";
-import store from './middleware'
+import store from "./middleware";
+
 import Container from "./Container";
 
 const drizzle = new Drizzle(drizzleOptions, store);

@@ -5,12 +5,12 @@ import { DrizzleContext } from "drizzle-react";
 import {
     Card,
     Box,
-    PublicAddress,
-    Text,
     Heading,
     Button,
     Loader
 } from "rimble-ui";
+
+import ProfileHover from 'profile-hover';
 
 const { AccountData } = newContextComponents;
 
@@ -29,35 +29,30 @@ export default () => (
             return (
                 <Box mb={20}>
                     <Card bg="#fff">
-                        <Heading.h4>Active Account</Heading.h4>
+                        <Heading.h4>3Box Profile Hover</Heading.h4>
                         <AccountData
                             drizzle={drizzle}
                             drizzleState={drizzleState}
                             accountIndex="0"
                             units="ether"
                             precision="3"
-                            render={({ address, balance, units }) => (
+                            render={({ address }) => (
                                 <Box
                                     mt={3}
+                                    pb={55}
                                     width={[
                                         1,
                                         1,
                                         0.5
                                     ]}
                                 >
-                                    <PublicAddress color="salmon" address={address} />
-                                    <Text
-                                        bold
-                                        fontWeight="700"
-                                        ml={1}
-                                    >
-                                        My Ether:
-                                        <Text.span
-                                            bold
-                                            fontWeight="700"
-                                            color="salmon"
-                                        >&nbsp;{balance}</Text.span> {units}
-                                    </Text>
+                                    <ProfileHover 
+                                        address={address}
+                                        orientation="top"
+                                        showName="true"
+                                        tileStyle="true"
+                                        url="https://develop.3box.io/hub"
+                                    />
                                 </Box>
                             )}
                         />

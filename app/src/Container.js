@@ -1,18 +1,19 @@
-import React, { Component, } from 'react';
+import React, { Component, } from "react";
 
 import {
   Flex,
   Box,
   ThemeProvider,
   theme
-} from 'rimble-ui';
+} from "rimble-ui";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.minimal.css";
 
-import Header from "./components/Header"
-import ActiveAccount from "./components/ActiveAccount"
-import JCoin from './components/JCoin';
+import Header from "./components/Header";
+import ThreeBox from "./components/ThreeBox";
+import ActiveAccount from "./components/ActiveAccount";
+import JCoin from "./components/JCoin";
 
 const dappTheme = {
   ...theme,
@@ -35,9 +36,12 @@ export default class App extends Component {
             <Header />
           </Box>
           <Box>
+            <ThreeBox />
+          </Box>
+          <Box>
             <ActiveAccount />
           </Box>
-          <ToastContainer />
+            <ToastContainer />
           <Box>
             <JCoin />
           </Box>

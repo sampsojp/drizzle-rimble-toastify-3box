@@ -63,7 +63,8 @@ const appMiddlewares = [contractEventNotifier];
 const store = generateStore({
     drizzleOptions,
     appMiddlewares,
-    disableReduxDevTools: false
+    disableReduxDevTools: false // enable ReduxDevTools!
 });
 
+// Use the store with DrizzleProvider
 export default store;
